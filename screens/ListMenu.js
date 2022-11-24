@@ -18,7 +18,7 @@ function ListMenu({ navigation }) {
     const render = ({ item }) => {
         return (
             <View style={{ width: 400, alignItems: 'center', paddingTop: 40 }}>
-                <TouchableOpacity style={{ flexDirection: 'row' }}>
+                <TouchableOpacity onPress={() => navigation.navigate('Cart')} style={{ flexDirection: 'row' }}>
                     <View>
 
                     </View>
@@ -58,11 +58,11 @@ function ListMenu({ navigation }) {
                     </TouchableOpacity>
                 </View>
             </View>
-            <View style={{ paddingTop: 10, height: 500, alignItems: 'center' }}>
+            <View style={{ paddingTop: 10, height: 550, alignItems: 'center' }}>
                 <FlatList data={Bakery4} renderItem={render} keyExtractor={item => item.id}>
                 </FlatList>
             </View>
-            <View style={{ paddingTop: 105, }}>
+            <View style={{ paddingTop: 55, }}>
                 <View style={{ backgroundColor: '#daa520', flexDirection: 'row', height: 72, justifyContent: 'space-between', alignItems: 'center' }}>
                     <View style={{}}>
                         <TouchableOpacity onPress={() => navigation.navigate('HomeMenu')}>
