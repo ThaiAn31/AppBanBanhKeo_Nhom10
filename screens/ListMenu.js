@@ -4,6 +4,17 @@ import Bakery4 from '../data/ListMenu'
 import AnimatedLottieView from 'lottie-react-native'
 
 function ListMenu({ navigation }) {
+
+
+    const animation = React.useRef(null);
+    React.useEffect(()=>{
+      
+            if(false){
+                animation.current.play(66, 66)
+            }else{
+                animation.current.play(0, 19)
+            }
+    }, [])
     const render = ({ item }) => {
         return (
             <View style={{ width: 400, alignItems: 'center', paddingTop: 40 }}>
@@ -15,12 +26,16 @@ function ListMenu({ navigation }) {
                         <Image source={item.image} style={{ width: 100, height: 80, borderTopLeftRadius: 10, borderBottomLeftRadius: 10, }} />
                         <Text style={{ fontSize: 16, fontWeight: 'bold' }}>{item.name}</Text>
                         <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#3cb371' }}>{item.price}</Text>
-                    </View>
-                    <AnimatedLottieView
-                    style={{height:100, width:100, padding:50}}
+                        <AnimatedLottieView
+                    style={{height:60, width:60}}
+                    ref={animation}
                         source={require("../animation/data.json")}
-                        autoPlay
+                        autoPlay={true}
+                        // loop={false}
+
                     />
+                    </View>
+                    
                 </TouchableOpacity>
             </View>
         )
