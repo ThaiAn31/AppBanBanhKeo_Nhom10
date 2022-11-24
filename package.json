@@ -13,6 +13,7 @@
     "@react-navigation/native-stack": "^6.9.1",
     "expo": "~47.0.3",
     "expo-status-bar": "~1.4.2",
+    "lottie-react-native": "^5.1.4",
     "react": "18.1.0",
     "react-native": "0.70.5",
     "react-with-params": "^0.2.0"

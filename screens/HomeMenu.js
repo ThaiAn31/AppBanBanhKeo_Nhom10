@@ -20,7 +20,7 @@ function HomeMenu({ navigation }) {
     const render = ({ item }) => {
         return (
             <View style={{ width: 160, alignItems: 'center' }}>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => navigation.navigate('ListMenu')}>
                     <View>
                         <Image source={item.image} style={{ width: 140, height: 120, borderTopRightRadius: 10, borderTopLeftRadius: 10 }} />
                     </View>
